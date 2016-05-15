@@ -1,4 +1,4 @@
-# react
+# MindSurf Web App
 React based Web App
 
 Environment:
