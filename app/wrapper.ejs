@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <title>MindSurf - Blow your ideas</title>
+        <!--css-->
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+        <!--<link rel="stylesheet" type="text/css" href="lib/foundation-icons/foundation-icons/foundation-icons.css">-->
+        <link rel="stylesheet" type="text/css" href="style/style.min.css">
+    </head>
+
+    <body>
+
+        <div class="container-fluid">
+          <div class="row">
+              <div id="HeaderComponent" class="col-md-8"></div>
+              <div id="SessionComponent" class="col-md-4"></div>
+          </div>
+
+          <div class="row">
+              <div id="content" class="col-md-12"></div>
+          </div>
+
+        </div>
+
+        <!--js-->
+        <span>
+            <script type="text/javascript" src="lib/jquery-2.1.4.min.js"></script>
+            <script type="text/javascript" src="lib/underscore-min.js"></script>
+            <script type="text/javascript" src="lib/persona.js"></script>
+            <script type="text/javascript" src="lib/react-0.14.3.js"></script>
+            <script type="text/javascript" src="lib/react-dom-0.14.3.js"></script>
+            <script type="text/javascript" src="lib/lz-string-1.4.4/libs/lz-string.min.js"></script>
+
+
+            <script type="text/javascript">
+                window.session= {
+                  mode: '<%= SESSION.mode %>',
+                  user: {
+                    id: <%= SESSION.user.id ? SESSION.user.id : "undefined" %>,
+                    email: '<%= SESSION.user.email %>',
+                    authorname: '<%= SESSION.user.authorname %>',
+                  },
+                  lang: '<%= SESSION.lang ? SESSION.lang : "en" %>'
+                }
+            </script>
+
+            <script type="text/javascript" src="js/app.min.js"></script>
+            <script type="text/javascript" src="js/<%= CONTROLLER %>.min.js"></script>
+        </span>
+
+    </body>
+</html>

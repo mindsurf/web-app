@@ -1,0 +1,115 @@
+$primary-1: #8D428D;
+$primary-2: #16295F;
+$primary-3: #B62E01;
+
+$shadow-1: #513451;
+$shadow-2: #0E1E4D;
+$shadow-3: #541C09;
+
+$action-1: #CEFF60;
+$action-2: #8D428D;
+
+$warn-1: #B62E01;
+
+$neutral-5: #F8F8F8;
+$neutral-4: #E9E7E7;
+$neutral-3: #D8E8F8;
+$neutral-2: #C8D8E8;
+$neutral-1: #A8C8C8;
+$neutral-0: #404040;
+
+@import './components/HeaderComponent';
+@import './components/SessionComponent';
+@import './components/TopComponent';
+@import './components/PicUploadComponent';
+
+div.col-md-1, div.col-md-2, div.col-md-3, div.col-md-4,
+div.col-md-5, div.col-md-6, div.col-md-7, div.col-md-8,
+div.col-md-9, div.col-md-10, div.col-md-11, div.col-md-12 {
+  padding:0px;
+  border: none;
+  border-radius: 0px;
+  box-shadow: none;
+  background-color: $neutral-5;
+
+  .action-1 { color:$neutral-5; cursor: pointer; }/*text-shadow: 0 0 3px #303030, 0 0 5px #E2F585*/
+  .action-1:hover {}
+
+  .panel {
+      padding: 0px;
+      border: none;
+      border-radius: 0px;
+      box-shadow: none;
+      background-color: transparent;
+      .panel-body {
+          padding: 0px;
+          border: none;
+          border-radius: 0px;
+          box-shadow: none;
+          background-color: transparent;
+      }
+  }
+}
+
+#content {
+    div {
+          .wellcome {
+              text-align: center;
+              color: $primary-2;
+              background-color: $neutral-4;
+              border-radius: 0px 2rem 2rem;
+              margin: 1rem;
+              padding: 2rem;
+          }
+          .form {
+            margin: 0 1rem;
+            background-color: $neutral-3;
+            color: $primary-2;
+
+            tr {
+
+              td {
+                padding: 1rem;
+                vertical-align: top;
+                display: block;
+              }
+            }
+
+            input, p, button {
+              width: 100%;
+              min-height: 3.5rem;
+              max-height: 20rem;
+              overflow-y: scroll;
+              padding: 0.5rem;
+              border: none;
+              border-radius: 0;
+              background-color: $neutral-2;
+              border: 1px solid transparent;
+            }
+
+            input.require {
+              color: $warn-1;
+            }
+
+            input:focus , input:hover, p:hover {
+              border: 1px solid $neutral-1;
+            }
+
+            p {
+              font-style: oblique;
+              color: $neutral-0;
+            }
+
+            button {
+              background-color: $neutral-1;
+              font-weight: bold;
+              color: $primary-2;
+            }
+
+            button:hover {
+              border: 1px solid $action-1;
+            }
+
+          }
+    }
+}

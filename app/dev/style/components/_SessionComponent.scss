@@ -1,0 +1,64 @@
+#SessionComponent {
+    float: right;
+    font-size: 0.90em;
+    background-color: $neutral-0;
+    color: $neutral-5;
+    height: 50px;
+
+    .glyphicon {
+      padding-left: 10px;
+    }
+
+    .col-md-12 {
+        padding-top: 15px;
+        text-align: center;
+        background-color: $neutral-0;
+        color: $neutral-5;
+        height: 50px;
+    }
+
+    .menu-item {
+        background-color: $neutral-0;
+        position: absolute;
+        z-index: 1000;
+        right: 0px;
+        height: 44px;
+        cursor: pointer;
+        border-bottom: solid 1px $neutral-5;
+    }
+
+    .menu-item:hover {
+        background-color: $action-2;
+    }
+
+    .menu-item-1 {
+        top: 50px;
+    }
+
+    .menu-item-2 {
+        top: 95px;
+    }
+
+      @media only screen and (max-width: 991px) {
+        top: -50px;
+        padding-right: 5px;
+
+        .menu-item {
+            position: relative;
+            top:0px;
+            right: -5px;
+
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+      top: 0px;
+      right: 0px;
+      width: 100%;
+      padding: 0px;
+
+      .menu-item {
+          right: 0px;
+      }
+  }
+}

@@ -1,0 +1,31 @@
+#HeaderComponent {
+    background-color: $neutral-0;
+    color: $neutral-5;
+    height: 50px;
+
+    .copo {
+        display: inline-block;
+        float: left;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        background-image: url("/img/copo2.png");
+        background-size: 100%;
+    }
+
+    .title {
+        display: inline-block;
+        float: left;
+        padding: 12px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    @media only screen and (max-width: 400px) {
+        border-bottom: none;
+
+        .copo {
+          margin-left: 50px;
+        }
+    }
+}
