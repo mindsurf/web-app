@@ -36,13 +36,10 @@
 
             <script type="text/javascript">
                 window.session= {
-                  mode: '<%= SESSION.mode %>',
-                  user: {
-                    id: <%= SESSION.user.id ? SESSION.user.id : "undefined" %>,
-                    email: '<%= SESSION.user.email %>',
-                    authorname: '<%= SESSION.user.authorname %>',
-                  },
-                  lang: '<%= SESSION.lang ? SESSION.lang : "en" %>'
+                  id: '<%= SESSION.id %>',
+                  email: '<%= SESSION.email %>',
+                  authorname: '<%= SESSION.authorname %>',
+                  state: '<%= SESSION.state %>'
                 }
             </script>
 

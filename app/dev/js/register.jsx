@@ -45,7 +45,7 @@ var RegisterComponent = React.createClass({
     return (
       <div>
           <div className="col-md-10 wellcome">
-              <span>Wellcome {window.session.user.email}</span>
+              <span>Wellcome {window.session.email}</span>
                 <br/>
               <span>Complete your registration in MindSurf</span>
           </div>

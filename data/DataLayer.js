@@ -1,6 +1,6 @@
 module.exports = function(){
     //model
-    this.sessionModel = require('./model/sessionModel');
+    this.userModel = require('./model/userModel');
 
     //bussiness objects
 

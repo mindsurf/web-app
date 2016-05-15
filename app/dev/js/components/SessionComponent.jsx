@@ -4,23 +4,23 @@ var SessionComponent = React.createClass({
     },
 
     render: function() {
-        switch(window.session.mode)
+        switch(window.session.state)
         {
-            case "user":
+            case 'U':
                 return (
                   <div>
                   </div>
                 );
 
-            case "visitor":
-                if(window.session.user.email)
+            case 'V':
+                if(window.session.email)
                     return (
                       <div className="panel panel-default">
                           <div className="panel-body">
                               <div>
                                   <div className="col-md-12">
                                       <span className="action-1" onClick={this.foldMenu} ref="email">
-                                        {window.session.user.email}
+                                        {window.session.email}
                                         <span className="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                                       </span>
                                   </div>
