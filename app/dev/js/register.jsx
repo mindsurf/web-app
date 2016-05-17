@@ -1,4 +1,5 @@
 import HeaderComponent from "./components/HeaderComponent.jsx";
+import TopComponent from "./components/TopComponent.jsx"
 import PicUploadComponent from "./components/PicUploadComponent.jsx";
 
 var RegisterComponent = React.createClass({
@@ -42,6 +43,59 @@ var RegisterComponent = React.createClass({
     });
   },
   render: function() {
+    if(true)
+    {
+      var content = (
+        <div>
+          <div className="col-md-11 wellcome">
+            Wellcome to MindSurf
+            <div className="email">{window.session.email}</div>
+          </div>
+          <div className="col-md-7 profile">
+            <table className="form"> <tbody>
+              <tr>
+                <th>Profile</th>
+              </tr>
+              <tr>
+                <td>Author Name</td>
+                <td><input type="text" ref="authorname" placeholder="This will be the default signature of your writtings" maxLength="45"/></td>
+              </tr>
+            </tbody></table>
+          </div>
+          <div className="col-md-4 terms">
+            <table className="form"> <tbody>
+              <tr>
+                <th>Terms & Conditions</th>
+              </tr>
+              <tr>
+                <td> <p>
+                Terms and conditions. Terms and conditions. Terms and conditions. Terms and conditions.
+                Terms and conditions. Terms and conditions. Terms and conditions. Terms and conditions.
+                Terms and conditions. Terms and conditions. Terms and conditions. Terms and conditions.
+                Terms and conditions. Terms and conditions. Terms and conditions. Terms and conditions.
+                Terms and conditions. Terms and conditions. Terms and conditions. Terms and conditions.
+                Terms and conditions. Terms and conditions. Terms and conditions. Terms and conditions.
+                Terms and conditions. Terms and conditions. Terms and conditions. Terms and conditions.
+                Terms and conditions. Terms and conditions. Terms and conditions. Terms and conditions.
+                Terms and conditions. Terms and conditions. Terms and conditions. Terms and conditions.
+                Terms and conditions. Terms and conditions. Terms and conditions. Terms and conditions.
+                Terms and conditions. Terms and conditions. Terms and conditions. Terms and conditions.
+                Terms and conditions. Terms and conditions. Terms and conditions. Terms and conditions.
+                Terms and conditions. Terms and conditions. Terms and conditions. Terms and conditions.
+                Terms and conditions. Terms and conditions. Terms and conditions. Terms and conditions.
+                Terms and conditions. Terms and conditions. Terms and conditions. Terms and conditions.
+                </p> </td>
+              </tr>
+            </tbody></table>
+          </div>
+        </div>);
+      var callback = function(){
+        navigator.id.logout();
+      }
+      return <TopComponent content={content} callback={callback}/>
+    }
+
+    else
     return (
       <div>
           <div className="col-md-10 wellcome">

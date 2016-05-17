@@ -1,13 +1,29 @@
+/**
+ * Color Palette
+ * 1 - purple / yellow
+ * 2 - blue / orange
+ * 3 - red / green
+**/
+
+/*pure color*/
 $primary-1: #8D428D;
 $primary-2: #16295F;
 $primary-3: #B62E01;
 
+/*light color*//*
+$light-1: #CCC0D8;
+$light-2: #B0C1F5;
+$light-3: #E7C4C4;*/
+
+/*dark color*/
 $shadow-1: #513451;
 $shadow-2: #0E1E4D;
 $shadow-3: #541C09;
 
+/*complimetary color*/
 $action-1: #CEFF60;
-$action-2: #8D428D;
+$action-2: #FFB649;
+$action-3: #C3EDB3;
 
 $warn-1: #B62E01;
 
@@ -17,6 +33,8 @@ $neutral-3: #D8E8F8;
 $neutral-2: #C8D8E8;
 $neutral-1: #A8C8C8;
 $neutral-0: #404040;
+
+@import './pages/RegisterPage';
 
 @import './components/HeaderComponent';
 @import './components/SessionComponent';
@@ -53,37 +71,18 @@ div.col-md-9, div.col-md-10, div.col-md-11, div.col-md-12 {
 
 #content {
     div {
-          .wellcome {
-              text-align: center;
-              color: $primary-2;
-              background-color: $neutral-4;
-              border-radius: 0px 2rem 2rem;
-              margin: 1rem;
-              padding: 2rem;
-          }
           .form {
-            margin: 0 1rem;
-            background-color: $neutral-3;
-            color: $primary-2;
-
-            tr {
-
-              td {
-                padding: 1rem;
-                vertical-align: top;
-                display: block;
-              }
-            }
-
+            width: 100%;
+            
             input, p, button {
               width: 100%;
               min-height: 3.5rem;
-              max-height: 20rem;
+              max-height: 40rem;
               overflow-y: scroll;
               padding: 0.5rem;
               border: none;
               border-radius: 0;
-              background-color: $neutral-2;
+              /*background-color: $neutral-2;*/
               border: 1px solid transparent;
             }
 
@@ -91,13 +90,13 @@ div.col-md-9, div.col-md-10, div.col-md-11, div.col-md-12 {
               color: $warn-1;
             }
 
-            input:focus , input:hover, p:hover {
+            input:focus , input:hover {
               border: 1px solid $neutral-1;
             }
 
             p {
+              padding-left: 0px;
               font-style: oblique;
-              color: $neutral-0;
             }
 
             button {

@@ -1,0 +1,52 @@
+#content.register{
+  height: 100rem;
+  background-image: url("../img/writting.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: $neutral-0;
+}
+#content.register .front {
+
+  background-color: transparent;
+  overflow-y: visible;
+
+  div {
+    background-color: transparent;
+    color: $neutral-5;
+  }
+
+  .wellcome {
+    text-align: center;
+    border: 1px solid $neutral-5;
+    border-radius: 0px 2rem 2rem;
+    margin: 1rem;
+    padding: 2rem;
+  }
+
+  .email {
+    color: $action-1;
+    font-weight: bold;
+  }
+
+  .profile {
+    padding: 2rem;
+  }
+
+  .form {
+    input {
+      background-color: rgba(255, 255, 255, 0.31);
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+    #content.register .front {
+      .profile, .terms {
+        padding: 2rem;
+      }
+      .terms {
+        padding-right: 0.9rem;
+      }
+    }
+}

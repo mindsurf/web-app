@@ -13,7 +13,21 @@ var SessionComponent = React.createClass({
                 );
 
             case 'V':
-                if(window.session.email)
+                return <span></span>;
+
+            default:
+                return (
+                  <div className="panel panel-default">
+                      <div className="panel-body">
+                          <div>
+                              <div className="col-md-12">
+                                  <span className="action-1" onClick={this.login}>LOGIN / REGISTER</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                );
+                /*if(window.session.email)
                     return (
                       <div className="panel panel-default">
                           <div className="panel-body">
@@ -33,19 +47,7 @@ var SessionComponent = React.createClass({
                               </div>
                           </div>
                       </div>
-                    );
-                else
-                    return (
-                      <div className="panel panel-default">
-                          <div className="panel-body">
-                              <div>
-                                  <div className="col-md-12">
-                                      <span className="action-1" onClick={this.login}>LOGIN / REGISTER</span>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                    );
+                    );*/
         }
     },
 

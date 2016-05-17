@@ -24,7 +24,7 @@ var TopComponent = React.createClass({
           <div id="TopComponent">
               <div className="close" onClick={this.close}>
                   <span className="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    
+
               </div>
               <div className="front">
                   {this.props.content}
