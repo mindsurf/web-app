@@ -9,5 +9,7 @@ all:
 	wget https://fb.me/react-dom-0.14.3.js
 	wget https://github.com/pieroxy/lz-string/archive/1.4.4.zip
 	unzip 1.4.4.zip
+	wget https://github.com/moment/moment/archive/2.13.0.zip
+	unzip 2.13.0.zip
 	wget https://github.com/vitalets/combodate/archive/1.0.7.zip
 	unzip 1.0.7.zip
