@@ -1,14 +1,26 @@
-#content.register{
-  height: 100rem;
+.page-register{
   background-image: url("../img/writting.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-color: $neutral-0;
-}
-#content.register .front {
 
+  #HeaderComponent, #SessionComponent {
+    display: none;
+  }
+}
+
+#content.register .front {
   background-color: transparent;
-  overflow-y: visible;
+  width: 100%;
+  left: 0;
+  right: 0;
+
+  .front {
+    width: 90%;
+    background-color: $neutral-0;
+    left: 5%;
+    right: 5%;
+  }
 
   div {
     background-color: transparent;
@@ -28,25 +40,62 @@
     font-weight: bold;
   }
 
-  .profile {
+  .profile, .terms {
     padding: 2rem;
   }
 
-  .form {
-    input {
+  .terms .form {
+    td > * {
       background-color: rgba(255, 255, 255, 0.31);
-      margin-left: 1rem;
     }
   }
-}
 
-@media only screen and (max-width: 991px) {
-    #content.register .front {
-      .profile, .terms {
-        padding: 2rem;
-      }
-      .terms {
-        padding-right: 0.9rem;
-      }
+  .profile .form {
+    td > * {
+      text-align: center;
+      padding: 0px;
+      margin: 0px;
+      padding-top: 1rem;
+      margin-bottom: 1rem;
+      background-color: rgba(255, 255, 255, 0.31);
     }
+  }
+
+  .genre > div {
+    div {
+      display: inline-block;
+      width: 50%;
+      cursor: pointer;
+    }
+    div:hover {
+      color: $action-1;
+    }
+    .active {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+
+  .combodate {
+    display: block;
+    select {
+      min-width: 30%;
+      background-color: transparent;
+      border: 1px solid transparent;
+      text-align: center;
+      cursor: pointer;
+
+      appearance:none;
+      -moz-appearance:none;
+      -webkit-appearance:none;
+    }
+
+    select:hover {
+      color: $action-1;
+    }
+  }
+
+  #PicUploadComponent > .header {
+    display: none;
+  }
 }

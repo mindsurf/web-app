@@ -13,7 +13,7 @@ var SessionComponent = React.createClass({
                 );
 
             case 'V':
-                return <span></span>;
+                return <span></span>
 
             default:
                 return (
@@ -76,7 +76,6 @@ var SessionComponent = React.createClass({
 
     login: function() {
         navigator.id.request();
-        //watch
     },
 
     logout: function() {

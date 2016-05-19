@@ -1,4 +1,6 @@
 #PicUploadComponent {
+    display: inline-block;
+    width: 100%;
     text-align: center;
     margin: 0px 1rem;
 
@@ -16,9 +18,9 @@
         display: block;
         text-align: center;
         font-size: 10em;
-        border: 1px solid $neutral-5;
-        color: $neutral-1;
-        background-color: $neutral-3;
+        //border: 1px solid $neutral-5;
+        //color: $neutral-1;
+        //background-color: $neutral-3;
 
         .icon-wrapper{
           width: 100%;
@@ -48,23 +50,22 @@
         display: block;
         text-align: center;
         font-size: 1.2rem;
-        border: 1px solid $neutral-5;
         background-color: transparent;
         div {
             height: 33.3%;
             padding: 30px 0px;
             cursor: pointer;
             text-align: left;
-            color: $primary-2;
-            border: 1px solid white;
-            background-color: $neutral-3;
+            //color: $primary-2;
+            //border: 1px solid white;
+            //background-color: $neutral-3;
             .glyphicon {
                 width: 3rem;
                 padding: 0px 10px;
             }
         }
         div:hover {
-            background-color: $neutral-1;
+            color: $action-1;
         }
     }
 

@@ -100,7 +100,8 @@ var PicUploadComponent = React.createClass({
         var callback = function(){
           _t.setState({render:"all"});
         };
-        return <TopComponent content={content} callback={callback}/>
+
+        return <TopComponent content={content} callback={callback} />
     },
 
     initSnapshot: function() {

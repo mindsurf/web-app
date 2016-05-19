@@ -10,15 +10,15 @@
         <link rel="stylesheet" type="text/css" href="style/style.min.css">
     </head>
 
-    <body>
+    <body class="state-<%= SESSION.state %> page-<%= CONTROLLER %>">
 
-        <div class="container-fluid state-<%= SESSION.state %>">
-          <div class="row">
+        <div class="container-fluid">
+          <div class="col-md-12">
               <div id="HeaderComponent" class="col-md-8"></div>
               <div id="SessionComponent" class="col-md-4"></div>
           </div>
 
-          <div class="row">
+          <div class="col-md-12">
               <div id="content" class="col-md-12 <%= CONTROLLER %>"></div>
           </div>
 
@@ -32,7 +32,8 @@
             <script type="text/javascript" src="lib/react-0.14.3.js"></script>
             <script type="text/javascript" src="lib/react-dom-0.14.3.js"></script>
             <script type="text/javascript" src="lib/lz-string-1.4.4/libs/lz-string.min.js"></script>
-
+            <script type="text/javascript" src="lib/moment-2.13.0/min/moment.min.js"></script>
+            <script type="text/javascript" src="lib/combodate-1.0.7/combodate.js"></script>
 
             <script type="text/javascript">
                 window.session= {

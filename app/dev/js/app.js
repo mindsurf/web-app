@@ -1,8 +1,9 @@
+import HeaderComponent from "./components/HeaderComponent.jsx";
 import SessionServices from "./services/SessionServices.js";
 import SessionComponent from "./components/SessionComponent.jsx";
 
-window.appUrl = "http://localhost:80";
-window.servicesUrl = "http://localhost:3001";
+window.appUrl = "http://192.168.0.6:80"; //"http://localhost:80";
+window.servicesUrl = "http://192.168.0.6:3001"; //"http://localhost:3001";
 window.console.log("Mindsurf");
 window.console.log("App URL " + window.appUrl);
 window.console.log("Services URL " + window.servicesUrl);
@@ -13,6 +14,11 @@ $.ajaxSetup({
       },
       crossDomain: true
   });
+
+window.headerComponent= ReactDOM.render(
+  <HeaderComponent />,
+  document.getElementById("HeaderComponent")
+);
 
 window.sessionServices = new SessionServices(
   window.appUrl,

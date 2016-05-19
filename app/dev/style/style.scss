@@ -21,11 +21,11 @@ $shadow-2: #0E1E4D;
 $shadow-3: #541C09;
 
 /*complimetary color*/
-$action-1: #CEFF60;
+$action-1: #E5FF60;
 $action-2: #FFB649;
-$action-3: #C3EDB3;
+$action-3: #C3EDB3;//C7FF49
 
-$warn-1: #B62E01;
+//$warn-1: #B62E01;
 
 $neutral-5: #F8F8F8;
 $neutral-4: #E9E7E7;
@@ -34,6 +34,7 @@ $neutral-2: #C8D8E8;
 $neutral-1: #A8C8C8;
 $neutral-0: #404040;
 
+@import './pages/OverviewPage';
 @import './pages/RegisterPage';
 
 @import './components/HeaderComponent';
@@ -41,6 +42,9 @@ $neutral-0: #404040;
 @import './components/TopComponent';
 @import './components/PicUploadComponent';
 
+.container-fluid {
+    padding:0px;
+}
 div.col-md-1, div.col-md-2, div.col-md-3, div.col-md-4,
 div.col-md-5, div.col-md-6, div.col-md-7, div.col-md-8,
 div.col-md-9, div.col-md-10, div.col-md-11, div.col-md-12 {
@@ -70,45 +74,70 @@ div.col-md-9, div.col-md-10, div.col-md-11, div.col-md-12 {
 }
 
 #content {
-    div {
-          .form {
-            width: 100%;
-            
-            input, p, button {
-              width: 100%;
-              min-height: 3.5rem;
-              max-height: 40rem;
-              overflow-y: scroll;
-              padding: 0.5rem;
-              border: none;
-              border-radius: 0;
-              /*background-color: $neutral-2;*/
-              border: 1px solid transparent;
-            }
+    .form {
+      width: 100%;
 
-            input.require {
-              color: $warn-1;
-            }
+      input, p, button {
+        width: 100%;
+        min-height: 3.5rem;
+        max-height: 41rem;
+        overflow-y: scroll;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 0;
+        /*background-color: $neutral-2;*/
+        border: 1px solid transparent;
+      }
 
-            input:focus , input:hover {
-              border: 1px solid $neutral-1;
-            }
+      input.require:invalid {
+        border: solid 1px $action-1;
+      }
 
-            p {
-              padding-left: 0px;
-              font-style: oblique;
-            }
+      input:focus , input:hover {
+        border: 1px solid $neutral-1;
+      }
 
-            button {
-              background-color: $neutral-1;
-              font-weight: bold;
-              color: $primary-2;
-            }
+      p {
+        padding-left: 0px;
+        font-style: oblique;
+      }
 
-            button:hover {
-              border: 1px solid $action-1;
-            }
+      button {
+        background-color: $neutral-1;
+        font-weight: bold;
+        color: $primary-2;
+      }
 
-          }
+      button:hover {
+        border: 1px solid $action-1;
+      }
+
+      th > * , td > * {
+        height: 100%;
+        min-height: 4rem;
+      }
+
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #content {
+      .form {
+        th, td {
+          //height: auto;
+        }
+      }
+    }
+}
+
+@media only screen and (max-width: 591px) {
+    #content {
+      .form {
+        th, td {
+          display: block;
+          text-align: center;
+          margin-top: 2rem;
+        }
+      }
     }
 }

@@ -11,17 +11,22 @@ var TopComponent = React.createClass({
 
     getInitialState: function(){
       return {
-          closed:false
+          closed:false,
+          zindex: 1000,
       }
     },
 
     render: function() {
-        if (this.state.closed)
-          return <span></span>;
+        //if (this.state.closed)
+        //return <span></span>;
 
+        var zindex= this.state.zindex;
+        var topComponents = $(".TopComponent");
+        if(topComponents)
+          zindex += topComponents.length;
 
         return (
-          <div id="TopComponent">
+          <div className="TopComponent" style={{zIndex:zindex}}>
               <div className="close" onClick={this.close}>
                   <span className="glyphicon glyphicon-remove" aria-hidden="true"></span>
 

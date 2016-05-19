@@ -11,18 +11,18 @@ module.exports = function(dataLayer,server){
     server.route('/overview')
         .get(function(req, res)
         {
-            res.render('wrapper', { CONTROLLER:'index' , SESSION:req.session });
+            if(req.session.state == 'V')
+              req.session= new dataLayer.userModel();
+            res.render('wrapper', { CONTROLLER:'overview' , SESSION:req.session });
         });
 
     server.route('/register')
         .get(function(req, res)
         {
-            //if attempt to register being registered, redirect
-            if(req.session.state == 'U')
-                res.redirect('/');
-            //else, continue
-            else
+            if(req.session.state == 'V')
                 res.render('wrapper', { CONTROLLER:'register' , SESSION:req.session });
+            else
+              res.redirect('/');
         });
 
     return this;

@@ -26,6 +26,8 @@
     "ejs": "^2.3.4",
     "express": "^4.13.3",
     "fs-plus": "^2.8.1",
+    "install": "^0.7.3",
+    "npm": "^3.9.0",
     "path": "^0.12.7",
     "serve-static": "^1.10.0",
     "urlencoded-request-parser": "^1.0.1"
